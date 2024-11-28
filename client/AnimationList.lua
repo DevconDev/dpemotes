@@ -14141,6 +14141,24 @@ DP.PropEmotes = {
     EmoteMoving = true,
             },
     },
+    ["redballoon"] = { -- Custom Prop by hollywoodiownu
+        "anim@heists@humane_labs@finale@keycards", 
+        "ped_a_enter_loop", 
+        "Red Balloon", 
+        AnimationOptions = {
+    Prop = "xm3_prop_xm3_balloon_01r",
+    PropBone = 18905,
+    PropPlacement = {
+        0.12, 
+        0.15,
+         0.0, 
+         -100.0, 
+         0.0, 
+         -12.0},
+    EmoteLoop = true,
+    EmoteMoving = true,
+            },
+    },
     ["gamer"] = { --- Custom Emote By MissSnowie
         "playing@with_controller",
         "base",

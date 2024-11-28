@@ -15,7 +15,7 @@ AddEventHandler("dp:CheckVersion", function()
     end
 end)
 
-function checkVersion(err, responseText, headers)
+[[--function checkVersion(err, responseText, headers)
     curVersion = LoadResourceFile(GetCurrentResourceName(), "version")
 
     if curVersion ~= responseText and tonumber(curVersion) < tonumber(responseText) then
@@ -30,4 +30,4 @@ function checkVersion(err, responseText, headers)
     else
         print("\n" .. resourceName .. " is up to date. (^2" .. curVersion .. "^7)")
     end
-end
+end--]]

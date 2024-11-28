@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------------------------------------
 -- Shared Emotes Syncing  ---------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------
-
+local QBCore = exports['qb-core']:GetCoreObject()
 RegisterServerEvent("ServerEmoteRequest")
 AddEventHandler("ServerEmoteRequest", function(target, emotename, etype)
     TriggerClientEvent("ClientEmoteRequestReceive", target, emotename, etype)
@@ -140,6 +140,14 @@ local function addKeybindEventHandlers()
         end
     end)
 end
+-- Useable items
+QBCore.Functions.CreateUseableItem("walkstick", function(source, item)
+    TriggerClientEvent("dp:Client:UseWalkingStick", source)
+end)
+
+--[[QBCore.Functions.CreateUseableItem("giftredballoon", function(source, item)
+    TriggerClientEvent("dp:Client:UseRedBalloon", source)
+end)]]--
 
 if Config.SqlKeybinding and MySQL then
     MySQL.update(
